@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacion MRU</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- custom-- css-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- graficar-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="nav-main">
+            <img src="img/logo2.jpg" class="nav-brand">
+            <ul class="nav-menu">
+                <li>
+                  <a href="#" id="play">Simular</a>
+                </li>
+                <li>
+                  <a href="#" id="btn_graf">Graficar</a>
+                </li>
+                <li>
+                  <a href="#" id="btn_tab">Tabular datos</a>
+                </li>
+        </nav>
+
+        <!-- SHOWCASE -->
+    <header class="showcase">
+        <h2>Movimiento Rectilineo Uniforme</h2>
+        <p>Es un movimiento en el cual un objeto se desplaza en línea recta, en una sola dirección, recorriendo distancias iguales en el mismo intervalo de tiempo, manteniendo en todo su movimiento una velocidad constante y sin aceleración.</p>
+      </header>
+    </div>
+
+    <div class="grid-datos">
+        <form >
+          <label for="primerNumero" >Velocidad (m/s)</label><br><input type="number" id="primerNumero" min="0" placeholder="valor de la velocidad" class="form-control" ><br>
+          <label for="segundoNumero">Tiempo (s)</label><br><input type="number" id="segundoNumero"  min="1" placeholder="valor del tiempo" class="form-control"><br><br>
+          <button class="btn btn-success" id="simular">Calcular</button><br><br>
+          <button class="btn btn-success" id="reset">Resetear</button><br><br> 
+          <div class="alert alert-success" id="distancia" role="alert">La distancia recorrida es=</div><br><br>
+          <img src="img/moto.png" alt="vehiculo de la simulacion" id="moto">
+        </form>
+      </div>
+
+    <div class="graficas">
+      <form>
+        <label>Grafica de tiempo vs distancia</label>
+        <canvas id="grafica" width="200" height="200"></canvas><br>
+        <label>Grafica de tiempo vs velocidad </label>
+        <canvas id="grafica2" width="200" height="200"></canvas><br>
+      </form>
+    </div>  
+    
+    <div class="tablas">
+      <form>
+        <table id="tabla1" border="1" WIDTH="800">
+          <tr>
+            <th>Tiempo</th>
+            <th>Distancia</th>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
